@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header page Shubham</title>
+  
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins",sans-serif;
+        }
+
+        nav{
+            width: 100vw;
+            padding-top: 30px;
+            position: fixed;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+
+        nav a{
+            color: #ffc; 
+            text-decoration: none;
+            transform: 1s all ease-in-out;
+            transition: 0.2s all ease-in-out;
+            border-radius: 12px;
+
+        }
+
+        nav a:hover{
+            color: rgb(56,49,49);
+            background-color: #ffc;
+            padding: 10px;
+
+        }
+
+        main{
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #262626;
+        }
+
+        h1{
+            padding: 0 10px;
+            text-align: center;
+            font-size: 5rem;
+            animation: glitch 3s 0s infinite alternate;
+            margin: 50px 0;
+            transition: 0.2s;
+        }
+
+        h1:hover{
+            transform: scale(1.1);
+        }
+
+         h3{
+            padding: 0 10px;
+            color: pink;
+            transition: 0.5s all ease-in-out;
+            text-align: center;
+         }
+
+          h3:hover{
+        transform: scale(1.1);
+          }
+
+          span{
+            color: pink;
+            text-align: center;
+            margin: 2px;
+          }
+
+          @keyframes glitch {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: black;
+    }
+
+    25% {
+        color: purple;
+    }
+
+    35% {
+        color: black;
+    }
+
+    50% {
+        color: brown;
+    }
+    
+    75% {
+        color: aliceblue;
+    }
+
+    100% {
+        color: pink;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+}
+</style>
+    
+</head>
+<body>
+
+    <nav>
+        <a href="https://www.linkedin.com/in/shubham0401/" target="_blank">Linkedin</a>
+        <a href="https://github.com/caprice04" target="_blank">Github</a>
+        <a href="https://www.instagram.com/madui.verse/" target="_blank">Instagram</a>
+        <a href="mailto:heyyou.caprice@gmail.com">Email</a>
+    </nav>
+
+    <main>
+        <h1>Hey👋</h1>
+        <h3>I'm a Frontend Developer and UI/UX Designer.</h3> <span>I build websites with ❤️ and ☕️!</span>
+    </main>
+
+
+    <script>
+        const title = document.querySelector("h1");
+        let name = ["I am Shubham", "I am शुभम"]
+        let index = 0;
+
+       setInterval(() => {
+        if(index > name .length -1 ){
+             index =0;
+
+        }
+        title.textContent = name[index];
+        index ++;
+       },4000);
+
+    </script>
+</body>
+</html>
